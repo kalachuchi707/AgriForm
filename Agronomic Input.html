@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!-- daily -->
+
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<head>
+  <title>Agronomic Input</title>
+</head>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<body>
+  <main>
+    <h1>H1.</h1>
+    <h2>Agronomic Inputs</h2>
+    <p>Instructions: Includes all applications from pre-planting through to, and including, harvest. One Form must be
+      completed for <em>EACH PRODUCTION SITE</em>.</p>
+
+    <fieldset>
+      <label>Application Date: <input type="date"></label><br />
+      <label>Product Name: <input type="text"></label><br />
+      <label>Weather Conditions: </label><br />
+      <p>Temperature: <span id="temperature"></span>°C</p>
+      <p>Condition: <span id="condition"></span></p>
+      <label>Signature of Applicator: <input type="text" placeholder="Signature"></label>
+    </fieldset>
+
+
+    </section>
+
+    <!--Do not delete pls-->
+    <h1></h1>
+    <p><span id="temperature"></span></p>
+    <p><span id="condition"></span></p>
+    <!--pls!-->
+
+    <button class="button" onclick="downloadButton()">Download This Form</button>
+
+    <script>
+      function downloadButton() {
+        window.print();
+      }
+
+      const getWeather = async () => {
+        const res = await fetch('https://api.weatherapi.com/v1/current.json?key=f30da51cfdca460ab0014042232006&q=Regina');
+        const weatherJson = await res.json();
+        const temperature = weatherJson.current.temp_c;
+        const condition = weatherJson.current.condition.text;
+
+        document.getElementById('temperature').textContent = temperature;
+        document.getElementById('condition').textContent = condition;
+      }
+      getWeather();
+    </script>
+
+  </main>
+</body>
+
+</html>

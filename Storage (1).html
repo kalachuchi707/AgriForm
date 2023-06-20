@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+</html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Storage Assessment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <h1>B. Storage Assessment</h1>
+    <p>Instructions: This Form must be completed prior to using storages for the first time in a season (use one Form
+      per storage for harvested and market product). If an item is not applicable, indicate N/A. Make additional copies
+      as necessary and complete as Page _ of _ to indicate more than one page if required.</p>
+
+    <form id="myForm">
+
+      <section>
+
+        <!--Section-->
+        <fieldset>
+          <label>Completed by: <input id="storage_user_name" type="text" placeholder="Name" required /></label>
+          <label>Date: <input id="storage_check_date" type="date" required /></label>
+          <label>Storage Id#/ Name: <input id="storage_id_name" type="text" required /></label>
+        </fieldset>
+
+        <!--Section-->
+        <fieldset>
+          <legend>Lights in the storage area are shatterproof or covered?</legend>
+          <input id="yes1" type="radio" name="yes-no1" value="yes" checked>Yes</label>
+          <input id="no1" type="radio" name="yes-no1" value="no">No</label>
+          <input type="text" placeholder="Action Taken if No" /></label>
+          <input id="na1" type="radio" name="yes-no1">N/A</label>
+        </fieldset>
+
+        <!--Section-->
+        <fieldset>
+          <legend>Storage is secured (e.g., with a lock) when unsupervised?</legend>
+          <input id="yes2" type="radio" name="yes-no2" value="yes" checked>Yes</label>
+          <input id="no2" type="radio" name="yes-no2" value="no">No</label>
+          <input type="text" placeholder="Action Taken if No" /></label>
+          <input id="na2" type="radio" name="yes-no2">N/A</label>
+        </fieldset>
+
+        <!--Section-->
+        <fieldset>
+          <legend>Product in storage is kept in proper conditions (e.g., on pallets)?</legend>
+          <input id="yes3" type="radio" name="yes-no3" value="yes" checked>Yes</label>
+          <input id="no3" type="radio" name="yes-no3" value="no">No</label>
+          <input type="text" placeholder="Action Taken if No" /></label>
+          <input id="na3" type="radio" name="yes-no3">N/A</label>
+        </fieldset>
+
+        <!--Section-->
+        <fieldset>
+          <legend>Product is stored away from leaky areas (e.g., from roofs, pipes, condensation)?</legend>
+          <input id="yes4" type="radio" name="yes-no4" value="yes" checked>Yes</label>
+          <input id="no4" type="radio" name="yes-no4" value="no">No</label>
+          <input type="text" placeholder="Action Taken if No" /></label>
+          <input id="na4" type="radio" name="yes-no4">N/A</label>
+        </fieldset>
+
+        <!--Section-->
+        <fieldset>
+          <legend>When the storage is in use, production site equipment and fertilizers are stored and repaired
+            elsewhere? Agricultural chemicals are never stored in product storages?</legend>
+          <input id="yes5" type="radio" name="yes-no5" value="yes" checked>Yes</label>
+          <input id="no5" type="radio" name="yes-no5" value="no">No</label>
+          <input type="text" placeholder="Action Taken if No" /></label>
+          <input id="na5" type="radio" name="yes-no5">N/A</label>
+        </fieldset>
+
+        <!--Section-->
+        <fieldset>
+          <legend>Treated seed is stored according to the label directions (i.e., stored away from product)?</legend>
+          <input id="yes6" type="radio" name="yes-no6" value="yes" checked>Yes</label>
+          <input id="no6" type="radio" name="yes-no6" value="no">No</label>
+          <input type="text" placeholder="Action Taken if No" /></label>
+          <input id="na6" type="radio" name="yes-no6">N/A</label>
+        </fieldset>
+
+
+        <!--Section-->
+        <fieldset>
+          <legend>How and when was the storage cleaned? (describe):</legend>
+          <input type="text" /></label>
+        </fieldset>
+
+        <input type="submit" value="Submit" formaction="" />
+
+    </form>
+
+    <a id="downloadAnchorElem"></a>
+
+    </section>
+
+    <div>
+      <!--Download Button for this individual Page-->
+      <button onclick="downloadButton()">Download This Form</button>
+      <script>
+        function downloadButton() {
+          window.print();
+        }
+      </script>
+    </div>
+
+  </main>
+
+  <script src="./script.js"></script>
+</body>
